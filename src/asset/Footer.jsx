@@ -1,11 +1,16 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
+
 import { FaFacebookF, FaInstagram, FaYoutube, FaEnvelope } from "react-icons/fa";
 import logo from "../image/logo-rbg.png"
+import Button from "../components/button";
 
 const Footer = () => {
+  const navigate = useNavigate(); 
+  
   return (
-    <footer className="bg-white border-t border-blue-200">
-      <div className="container mx-auto px-4 py-8">
+    <footer className="bg-white shadow pt-[10px]">
+      <div className="container mx-auto lgm:px-[4rem] px-6 mt-[2rem]">
         {/* Footer Content */}
         <div className="flex flex-wrap justify-between items-start">
           {/* Logo Section */}
@@ -13,10 +18,10 @@ const Footer = () => {
             <img
               src={logo}
               alt="Namplov"
-              className="w-24 mb-4"
+              className="w-24 ml-[1rem]"
             />
-            <p className="text-blue-700 font-semibold">Find Us in Social:</p>
-            <div className="flex space-x-4 mt-2 text-blue-700">
+            <p className="text-logocolor font-semibold">Find Us in Social :</p>
+            <div className="flex space-x-4 mt-2 text-blue">
               <FaFacebookF className="hover:text-blue-900 cursor-pointer" />
               <FaInstagram className="hover:text-blue-900 cursor-pointer" />
               <FaYoutube className="hover:text-blue-900 cursor-pointer" />
@@ -28,20 +33,20 @@ const Footer = () => {
           <div className="grid grid-cols-3 gap-8 text-blue-700">
             {/* Test Section */}
             <div>
-              <h3 className="font-bold text-blue-900 mb-4">Test</h3>
+              <h3 className="font-bold text-logocolor mb-4">Test</h3>
               <ul className="space-y-2">
-                <li className="hover:text-blue-900 cursor-pointer">Major Recommend</li>
-                <li className="hover:text-blue-900 cursor-pointer">IQ Test</li>
-                <li className="hover:text-blue-900 cursor-pointer">Personality Test</li>
+                <li className="hover:text-logocolor cursor-pointer">Major Recommend</li>
+                <li className="hover:text-logocolor cursor-pointer">IQ Test</li>
+                <li className="hover:text-logocolor cursor-pointer">Personality Test</li>
               </ul>
             </div>
 
             {/* News Section */}
             <div>
-              <h3 className="font-bold text-blue-900 mb-4">News</h3>
+              <h3 className="font-bold text-logocolor mb-4">News</h3>
               <ul className="space-y-2">
-                <li className="hover:text-blue-900 cursor-pointer">Universities</li>
-                <li className="hover:text-blue-900 cursor-pointer">Scholarship</li>
+                <li className="hover:text-logocolor cursor-pointer">Universities</li>
+                <li className="hover:text-logocolor cursor-pointer">Scholarship</li>
               </ul>
             </div>
 
@@ -57,16 +62,20 @@ const Footer = () => {
 
           {/* Online Learning Button */}
           <div className="mt-6 sm:mt-0">
-            <button className="bg-blue-900 text-white py-2 px-6 rounded-lg shadow-lg md:mt-4 hover:bg-blue-700">
+            <Button
+            label="Go Back"
+            onClick={() => navigate('/')}
+            >
               Online Learning
-            </button>
+            </Button>
           </div>
         </div>
 
         {/* Bottom Tagline */}
-        <div className="border-t border-blue-200 mt-8 pt-4 text-center">
-          <p className="text-blue-700 font-semibold">Turning Ambition into Action</p>
+        <div className="border-t border-logocolor mt-[1rem] flex items-center justify-center min-h-[3rem]">
+          <p className="text-logocolor font-semibold ">Turning Ambition into Action</p>
         </div>
+
       </div>
     </footer>
   );

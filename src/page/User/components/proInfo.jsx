@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import eyeIcon from "../../image/eye.png";
-import eyeSlashIcon from "../../image/eye_close.png";
+import eyeIcon from "../../../image/eye.png";
+import eyeSlashIcon from "../../../image/eye_close.png";
 
 const ProfileInfo = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);

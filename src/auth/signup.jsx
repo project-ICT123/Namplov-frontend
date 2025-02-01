@@ -4,9 +4,10 @@ import bookImg from "../image/book.png"; // Replace with the correct image path
 import eyeIcon from "../image/eye.png"; // Eye icon PNG
 import eyeSlashIcon from "../image/eye_close.png"; // Eye slash icon PNG
 import { Link } from "react-router-dom";
-import logo from "../image/logo-rbg.png";
 import { useNavigate } from 'react-router-dom';
-import { FaArrowLeft } from "react-icons/fa"; // Import the icon
+
+import Button from "../components/button";
+
 
 function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
@@ -16,6 +17,9 @@ function SignUp() {
     emailOrPhone: '',
     password: '',
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
 
   const navigate = useNavigate(); // Use useNavigate for navigation
 
@@ -32,6 +36,8 @@ function SignUp() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true); // Disable button during submission
+
     try {
       const response = await axios.post('http://localhost:8000/api/register', {
         username: formData.fullName,
@@ -52,17 +58,17 @@ function SignUp() {
   };
 
   return (
-    <div>
-      <Link to="/">
-        <button
-          type="button"
-          className="m-1 md:m-2 lg:m-4 xl:m-4 text-white bg-blue-800 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-[10px] sm:lg:text-[12px] md:text-[12px] lg:text-[12px] xl:text-md px-2 sm:px-3 md:px-4 lg:px-5 xl:px-6 py-2 flex items-center"
-        >
-          <FaArrowLeft className="mr-2" /> Go Back
-        </button>
-      </Link>
+    <main className="min-h-screen">
+      <div className="absolute p-[2rem]">
+        <Button label="Go Back" onClick={() => navigate('/')}>
+          <svg className="w-5 h-5 mr-[5px] mb-[2px] text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
+          </svg>
+          Go Back
+        </Button>
+      </div>
       <div className="h-auto flex items-center justify-center">
-        <div className="mt-2 flex flex-col lg:flex-row w-full max-w-7xl bg-white rounded-lg overflow-hidden">
+        <div className="mt-2 flex flex-col lg:flex-row w-full max-w-7xl overflow-hidden">
           {/* Left Column: Image Section */}
           <div className="hidden lg:flex lg:w-1/2 items-center justify-center">
             <img
@@ -75,12 +81,7 @@ function SignUp() {
           {/* Right Column: Sign-Up Form */}
           <div className="w-full lg:w-1/2 p-6 sm:p-10 lg:p-16">
             <div className="text-center mb-10">
-              <img
-                src={logo}
-                alt="Company logo"
-                className="mx-auto w-20 md:w-24"
-              />
-              <h2 className="mt-6 text-2xl md:text-3xl font-bold text-pink-600 dark:text-white">
+              <h2 className="mt-6 text-2xl md:text-3xl font-bold text-pink dark:text-white">
                 Sign Up
               </h2>
               <h3 className="mt-4 text-xl md:text-2xl font-bold text-blue-900 dark:text-white">
@@ -90,14 +91,14 @@ function SignUp() {
                 Already have an account?{" "}
                 <Link
                   to="/login"
-                  className="text-pink-600 font-medium hover:underline"
+                  className="text-pink font-medium underline"
                 >
-                  Log in
+                  Login
                 </Link>
               </p>
             </div>
 
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form className="space-y-6 text-left" onSubmit={handleSubmit}>
               {/* Full Name and Gender */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="sm:col-span-2">
@@ -127,8 +128,11 @@ function SignUp() {
                     className="w-full px-2 py-1 mt-1 border rounded-lg text-neutral-800 border-neutral-300 focus:ring-2 focus:ring-blue-500 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-200 dark:focus:ring-blue-400"
                     required
                     onChange={handleChange}
+                    defaultValue=""
                   >
-                    <option value="">Select Gender</option>
+                    <option value="" disabled hidden>
+                      Select Gender
+                    </option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="other">Other</option>
@@ -185,24 +189,24 @@ function SignUp() {
               </div>
 
               {/* Submit Button */}
-              <div>
-                <button
-                  type="submit"
-                  className="w-full py-2.5 text-white bg-blue-900 rounded-lg shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-                >
-                  Sign Up
-                </button>
+              <div className='flex item-center justify-center'>
+                <Button
+                    label="Signup"
+                    onClick={handleSubmit}
+                    disabled={isSubmitting}
+                    className={` ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  />
               </div>
             </form>
 
             {/* Terms of Service */}
             <p className="mt-4 text-center text-sm text-neutral-500 dark:text-neutral-300">
               By signing up, you agree to our{" "}
-              <Link to="/terms" className="text-blue-500 hover:underline">
+              <Link to="/terms" className="text-blue underline">
                 terms of use
               </Link>{" "}
               and{" "}
-              <Link to="/privacy" className="text-blue-500 hover:underline">
+              <Link to="/privacy" className="text-blue underline">
                 privacy policy
               </Link>
               .
@@ -210,7 +214,7 @@ function SignUp() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 

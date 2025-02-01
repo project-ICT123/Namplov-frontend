@@ -1,6 +1,6 @@
 import React from "react";
-import major from '../../image/major.png';
-import personal from '../../image/profile.png'
+import major from '../../../image/major.png';
+import personal from '../../../image/profile.png'
 
 const MyResultTest = () => {
   const results = [

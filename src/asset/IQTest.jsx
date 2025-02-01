@@ -1,10 +1,11 @@
 import React from 'react';
 import math from "../image/math.png";
 import { GiBrain } from "react-icons/gi";
+import crown from "../image/8.png";
 
 function IQTest() {
   return (
-    <div className="bg-blue-900 text-white shadow-lg mb-[100px] lg:h-[260px] rounded-xl p-5 sm:p-6 flex flex-col items-center justify-center relative hover:shadow-2xl cursor-pointer transition-all duration-300 lg:col-span-2">
+    <div className="bg-logocolor text-white shadow  lg:h-[250px] sm:h-[200px] h-[150px] rounded-xl p-5 sm:p-6 flex flex-col items-center justify-center relative hover:shadow-2xl cursor-pointer transition-all duration-300 lg:col-span-2">
       <div className="relative flex items-center justify-center">
         <GiBrain className="text-white text-5xl sm:text-6xl mr-3" />
         <img src={math} alt="Math" className="w-16 sm:w-20" />
@@ -14,8 +15,8 @@ function IQTest() {
         <span className="line-through text-gray-300">$0.99</span>{" "}
         <span>$0.49</span>
       </p>
-      <div className="absolute top-3 right-3 bg-pink-500 rounded-full p-2">
-        <span className="text-white font-bold">👑</span>
+      <div className="absolute top-3 right-3">
+        <img src={crown} alt="Math" className="w-10 sm:w-15" />
       </div>
     </div>
   );
