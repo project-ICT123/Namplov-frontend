@@ -8,7 +8,7 @@ const SeeResult = () => {
     const navigate = useNavigate(); 
     
     return (
-        <main className='sm573:px-8 px-5 relative'>
+        <main className='sm573:px-8 sm573:py-4 px-4 relative'>
             <Congratulations/>
             <header className="relative z-10">
                 <Button
