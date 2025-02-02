@@ -61,7 +61,7 @@ const Result = () => {
     ];
 
     return (
-        <main className='sm573:px-8 p-3 mb-[2rem]'>
+        <main className='sm573:px-8 sm573:p-4 px-4 mb-[2rem]'>
             <header>
                 <Button
                     label="Go Back"
@@ -138,16 +138,14 @@ const Result = () => {
                                 className="flex justify-end lgm:mt-[13.5rem] h-[5rem] fixed lgs:static bottom-[2rem] right-[2rem] item-center justify-center "
                             >
                                 <Button label="Go Back">
-                                    <div className="flex flex-col items-center justify-center w-[10rem]">
+                                    <div className="flex flex-col items-center justify-center sm879:w-[10rem]  ">
                                         <p>See more majors</p>
                                         <div className="flex">
                                             that fit you
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-[-15px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
                                             </svg>
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                                            </svg>
+
                                         </div>
                                     </div>
                                 </Button>
