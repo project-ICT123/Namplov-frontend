@@ -86,10 +86,10 @@ const Result = () => {
                     <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-pink mb-3">
                         RESULT
                     </h1>
-                    <h1 className="sm425:block hidden text-xl sm:text-2xl md:text-3xl font-semibold text-logocolor mb-5">
+                    <h1 className="sm425:block hidden text-xl sm:text-2xl md:text-3xl font-semibold text-logocolor sm879:mb-5">
                         Personality type + Major Recommend
                     </h1>
-                    <h1 className="sm425:hidden block text-xl sm:text-2xl md:text-3xl font-semibold text-logocolor mb-5">
+                    <h1 className="sm425:hidden block text-xl sm:text-2xl md:text-3xl font-semibold text-logocolor ">
                         Personality type <br/> + Major Recommend
                     </h1>
                     <p className="text-sm sm:text-base md:text-lg text-gray mb-3">
@@ -103,8 +103,8 @@ const Result = () => {
 
                 <nav className="flex flex-col">
                     <div className="p-5 bg-white rounded-2xl lgm:mt-[2rem] max-w-7xl">
-                        <p className="text-sm sm:text-base md:text-lg text-logocolor mb-3">
-                            Your Personality Type : <span className="text-pink font-bold"> ENTJ </span>
+                        <p className="text-sm font-bold sm:text-base md:text-lg text-logocolor mb-3">
+                            Your Personality Type : <span className="text-pink "> ENTJ </span>
                         </p>
                         <p className="text-sm sm:text-base md:text-lg text-gray mb-3">
                             Hearty, frank, able in studies, leader in activities. Usually good in anything that requires reasoning and intelligent talk, such as public speaking. Are usually well informed and enjoy adding to their fund of knowledge. May sometimes be more positive and confident than their experience in an area warrants.
@@ -149,7 +149,7 @@ const Result = () => {
                                         <p>See more majors</p>
                                         <div className="flex">
                                             that fit you
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 mt-[4px]">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 mt-[2px] sm573:mt-[4px]">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
                                             </svg>
 
