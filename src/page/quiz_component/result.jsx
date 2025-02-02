@@ -135,10 +135,10 @@ const Result = () => {
                             onStop={handleDragStop}
                         >
                             <nav
-                                className="flex justify-end lgm:mt-[11rem] h-[5rem] fixed lgs:static bottom-[2rem] right-[2rem] item-center justify-center"
+                                className="flex justify-end lgm:mt-[11rem] h-[5rem] fixed lgs:static bottom-[2rem] right-[2rem] item-center justify-center "
                             >
                                 <Button label="Go Back">
-                                    <div className="flex flex-col items-center justify-center">
+                                    <div className="flex flex-col items-center justify-center w-[10rem]">
                                         <p>See more majors</p>
                                         <div className="flex">
                                             that fit you
