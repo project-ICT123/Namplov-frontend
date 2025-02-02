@@ -67,7 +67,14 @@ const Result = () => {
                     label="Go Back"
                     onClick={() => navigate('/major_test/view_result')}
                 >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mr-[5px] mt-[-1px]">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="2"
+                        stroke="currentColor"
+                        className="size-4 mr-[5px] mt-[-1px]"
+                    >
                         <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                     </svg>
 
@@ -104,7 +111,7 @@ const Result = () => {
                         </p>
                     </div>
                     <div className="flex flex-col lgm:flex-row gap-[2rem]">
-                        <nav className="p-5 bg-white rounded-2xl mt-[2.5rem] max-w-5xl">
+                        <nav className="p-5 bg-white rounded-2xl mt-[2rem] lgm:mt-[2.5rem] max-w-5xl">
                             <p className="text-sm font-bold sm:text-base md:text-lg text-logocolor mb-2">
                                 Occupation/Major Trend :
                             </p>
@@ -142,7 +149,7 @@ const Result = () => {
                                         <p>See more majors</p>
                                         <div className="flex">
                                             that fit you
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 mt-[4px]">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
                                             </svg>
 

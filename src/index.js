@@ -52,7 +52,7 @@ root.render(
           {/* Test Routes */}
           <Route path="/personality_test" element={<Personal />} />
           <Route path="/major_test" element={<MajorRecommand />} />
-          <Route path="major_test/view_result/result/more_major_that_fit_you" element={<Moremajor />} />
+          <Route path="/major_test/view_result/result/more_major_that_fit_you" element={<Moremajor />} />
 
 
           {/* Question Routes */}
