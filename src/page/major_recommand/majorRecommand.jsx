@@ -12,7 +12,7 @@
     return (
       <main className='sm573:px-8 px-3'>
         <header className="relative">
-          <div className='absolute md:top-[-1rem] top-[-6rem]'>
+          <div className='absolute md:top-[-1rem] top-[-6.2rem]'>
             <Button
               label="Go Back"
               onClick={() => navigate('/')}

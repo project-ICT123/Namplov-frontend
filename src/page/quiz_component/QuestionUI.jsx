@@ -91,7 +91,7 @@ const QuizUI = ({ questions }) => {
 
   return (
 
-    <main className="flex flex-col mx-[2rem] my-[1rem] max-w-8xl mx-auto px-[2rem]">
+    <main className="flex flex-col max-w-8xl mx-auto sm573:px-[2rem] sm573:py-[1rem] px-[1rem]">
     
       <div className=''>
         <Button
@@ -107,7 +107,7 @@ const QuizUI = ({ questions }) => {
 
       <div className="flex flex-col sm879:flex-row justify-between items-center mx-auto lgd:gap-[10rem] mt-[2rem]">
         <section >
-          <nav className=" h-[15rem] sm573:w-[25rem] bg-white rounded-xl shadow p-6 relative">
+          <nav className=" h-[15rem] sm573:w-[25rem] sm425:w-[23rem] sm375:w-[21.5rem] w-[18rem] bg-white rounded-xl shadow p-6 relative">
             <div className="flex justify-between items-center">
               <button
                 onClick={handleBack}
