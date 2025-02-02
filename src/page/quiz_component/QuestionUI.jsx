@@ -91,7 +91,7 @@ const QuizUI = ({ questions }) => {
 
   return (
 
-    <main className="flex flex-col mx-[2rem] my-[1rem] max-w-8xl mx-auto">
+    <main className="flex flex-col mx-[2rem] my-[1rem] max-w-8xl mx-auto px-[2rem]">
     
       <div className=''>
         <Button

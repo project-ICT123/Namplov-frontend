@@ -61,7 +61,7 @@ const Result = () => {
     ];
 
     return (
-        <main className='sm573:px-8 px-3 py-5 mb-[2rem]'>
+        <main className='sm573:px-8 p-3 mb-[2rem]'>
             <header>
                 <Button
                     label="Go Back"
@@ -108,7 +108,7 @@ const Result = () => {
                             <p className="text-sm font-bold sm:text-base md:text-lg text-logocolor mb-2">
                                 Occupation/Major Trend :
                             </p>
-                            <div className="sm375:h-[5rem] md:h-[6rem] sm375:mb-0 mb-2 item-start">
+                            <div className="sm375:h-[5rem] md:h-[7rem] sm375:mb-0 mb-2 item-start">
                                 <ul
                                     className={`list-disc list-inside text-gray text-sm sm:text-base md:text-lg ${
                                         listData.length === 3 || listData.length === 4
@@ -124,7 +124,7 @@ const Result = () => {
                                 </ul>
                             </div>
 
-                            <p className="text-sm font-bold sm:text-base md:text-lg text-logocolor">
+                            <p className="text-sm font-bold sm:text-base md:text-lg text-logocolor ">
                                 Focus : <span className="text-gray font-normal">Use analytic, strategic, Planning, and organisation to get tesk complete and organisation to get tesk complete</span>
                             </p>
                         </nav>
@@ -135,7 +135,7 @@ const Result = () => {
                             onStop={handleDragStop}
                         >
                             <nav
-                                className="flex justify-end lgm:mt-[11rem] h-[5rem] fixed lgs:static bottom-[2rem] right-[2rem] item-center justify-center "
+                                className="flex justify-end lgm:mt-[13.5rem] h-[5rem] fixed lgs:static bottom-[2rem] right-[2rem] item-center justify-center "
                             >
                                 <Button label="Go Back">
                                     <div className="flex flex-col items-center justify-center w-[10rem]">
