@@ -237,7 +237,7 @@ const QuizUI = ({ questions }) => {
             <img
               src={MyImage4}
               alt="Completed"
-              className=" max-w-md mx-auto"
+              className="w-full max-w-md mx-auto"
             />
           </section>
         )}
