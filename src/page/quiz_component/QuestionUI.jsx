@@ -44,7 +44,7 @@ const QuizUI = ({ questions }) => {
     localStorage.setItem('quizResults', JSON.stringify(results));
 
     setTimeout(() => {
-      navigate('/major_test/seeresult', { 
+      navigate('/major_test/view_result', { 
         state: { 
           results,
           answersSelected: selectedIndex 

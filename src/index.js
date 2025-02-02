@@ -16,6 +16,8 @@ import StartQuiz  from './page/quiz_component/startQuiz';
 import SeeResult from './page/quiz_component/seeresult';
 import Result  from './page/quiz_component/result';
 
+import Moremajor from './page/major_recommand/moremajor';
+
 // Wrapper component to conditionally render Navbar
 const Layout = ({ children }) => {
   const location = useLocation();
@@ -50,12 +52,14 @@ root.render(
           {/* Test Routes */}
           <Route path="/personality_test" element={<Personal />} />
           <Route path="/major_test" element={<MajorRecommand />} />
+          <Route path="major_test/view_result/result/more_major_that_fit_you" element={<Moremajor />} />
+
 
           {/* Question Routes */}
           <Route path="/personal_test/all_question/personality" element={<QuestionPersonal />} />
           <Route path="/major_test/all_question/major" element={<QuestionMajor />} />
-          <Route path="/major_test/seeresult" element={<SeeResult />} />
-          <Route path="/major_test/result" element={<Result />} />
+          <Route path="/major_test/view_result" element={<SeeResult />} />
+          <Route path="/major_test/view_result/result" element={<Result />} />
 
 
           <Route path="/all_question/:typeqcm" element={<StartQuiz />} />

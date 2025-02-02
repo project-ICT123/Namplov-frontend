@@ -35,7 +35,7 @@ const Result = () => {
 
         // If the user moved less than 5 pixels, consider it a click
         if (distanceMoved < 5) {
-            navigate('/'); // Navigate only if the user didn't drag
+            navigate('/major_test/view_result/result/more_major_that_fit_you'); // Navigate only if the user didn't drag
         }
 
         setIsDragging(false); // User stopped dragging
@@ -65,7 +65,7 @@ const Result = () => {
             <header>
                 <Button
                     label="Go Back"
-                    onClick={() => navigate('/major_test')}
+                    onClick={() => navigate('/major_test/view_result')}
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mr-[5px] mt-[-1px]">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
@@ -137,7 +137,7 @@ const Result = () => {
                             <nav
                                 className="flex justify-end lgm:mt-[13.5rem] h-[5rem] fixed lgs:static bottom-[2rem] right-[2rem] item-center justify-center "
                             >
-                                <Button label="Go Back">
+                                <Button label="See More Major">
                                     <div className="flex flex-col items-center justify-center sm879:w-[10rem]  ">
                                         <p>See more majors</p>
                                         <div className="flex">
