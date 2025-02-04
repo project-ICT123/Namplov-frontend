@@ -10,9 +10,9 @@ function StartQuiz({ typeqcm, destination = "/all_question"  }) {
       {/* Container */}
       <nav className="w-full max-w-4xl p-8 md:p-12 bg-white rounded-2xl shadow">
         {/* Title */}
-        <h1 className="text-center text-xl text-center text-base sm:text-xl font-semibold text-logocolor mb-6 sm:mb-8">
-          &quot; There are a lot of 70 questions. Please take your time and don't rush
-          to answer them &quot;
+        <h1 className="text-center text-lg sm375:text-xl text-center text-base sm:text-xl font-semibold text-logocolor mb-6 sm:mb-8">
+          &quot;There are a lot of 70 questions. Please take your time and don't rush
+          to answer them&quot;
         </h1>
         {/* Subtitle */}
         <p className="text-center text-sm sm:text-base md:text-lg text-gray mb-3">

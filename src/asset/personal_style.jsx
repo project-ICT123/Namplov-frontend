@@ -58,7 +58,7 @@ const PersonalityTraitsList = ({ typeqcm, destination }) => {
             Key Letters
             </p>
         </header>
-        <section className="flex items-center justify-center mt-[1rem] ">
+        <section className="flex items-center justify-center mt-[1rem] lgl:mt-[3rem]">
             <TraitsList traitsData={traitsData} />
         </section>
       </div>
@@ -105,12 +105,12 @@ const PersonalityTraitsList = ({ typeqcm, destination }) => {
       {/* Modal - StartQuiz */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="sm:p-6 max-w-4xl flex relative">
+          <div className="p-[1rem] max-w-4xl flex relative">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="size-12 text-gray hover:text-pink absolute top-2 right-2 m-4 cursor-pointer"
+              className="size-12 text-gray hover:text-pink absolute top-[-1.5rem] right-[-1rem] m-4 cursor-pointer"
               onClick={() => setIsModalOpen(false)} // Handle click to close modal
             >
               <path

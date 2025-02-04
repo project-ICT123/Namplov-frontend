@@ -59,7 +59,7 @@ function SignUp() {
 
   return (
     <main className="min-h-screen">
-      <div className="absolute p-[2rem]">
+      <div className="absolute sm573:px-[2rem] sm573:py-[1rem] px-[1rem]">
         <Button label="Go Back" onClick={() => navigate('/')}>
           <svg className="w-5 h-5 mr-[5px] mb-[2px] text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
@@ -67,8 +67,8 @@ function SignUp() {
           Go Back
         </Button>
       </div>
-      <div className="h-auto flex items-center justify-center">
-        <div className="mt-2 flex flex-col lg:flex-row w-full max-w-7xl overflow-hidden">
+      <div className=" flex items-center justify-center">
+        <div className=" flex flex-col lg:flex-row w-full max-w-7xl overflow-hidden">
           {/* Left Column: Image Section */}
           <div className="hidden lg:flex lg:w-1/2 items-center justify-center">
             <img
@@ -100,8 +100,8 @@ function SignUp() {
 
             <form className="space-y-6 text-left" onSubmit={handleSubmit}>
               {/* Full Name and Gender */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="sm:col-span-2">
+              <div className="grid grid-cols-1 sm375:grid-cols-2 sm:grid-cols-3 gap-4">
+                <div className="sm375:col-span-2">
                   <label
                     htmlFor="fullName"
                     className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
@@ -111,7 +111,7 @@ function SignUp() {
                   <input
                     type="text"
                     id="fullName"
-                    className="w-full px-4 py-2 mt-1 border rounded-lg text-neutral-800 border-neutral-300 focus:ring-2 focus:ring-blue-500 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-200 dark:focus:ring-blue-400"
+                    className="w-full px-4 py-2 mt-1 border rounded-lg text-neutral-800 border-neutral-300 focus:ring-2 focus:ring-logocolor focus:outline-none focus:ring-offset-2"
                     required
                     onChange={handleChange}
                   />
@@ -125,13 +125,73 @@ function SignUp() {
                   </label>
                   <select
                     id="gender"
-                    className="w-full px-2 py-1 mt-1 border rounded-lg text-neutral-800 border-neutral-300 focus:ring-2 focus:ring-blue-500 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-200 dark:focus:ring-blue-400"
+                    className="w-full px-2 py-[5.5px] mt-1 border rounded-lg text-neutral-800 border-neutral-300 focus:ring-2 focus:ring-logocolor focus:outline-none focus:ring-offset-2"
                     required
                     onChange={handleChange}
                     defaultValue=""
                   >
                     <option value="" disabled hidden>
                       Select Gender
+                    </option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    htmlFor="fullName"
+                    className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
+                  >
+                    Year of birth*
+                  </label>
+                  <input
+                    type="number"
+                    id="fullName"
+                    className="w-full px-4 py-2 mt-1 border rounded-lg text-neutral-800 border-neutral-300 focus:ring-2 focus:ring-logocolor focus:outline-none focus:ring-offset-2"
+                    required
+                    onChange={handleChange}
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="gender"
+                    className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
+                  >
+                    Education*
+                  </label>
+                  <select
+                    id="gender"
+                    className="w-full px-2 py-[5.5px] mt-1 border rounded-lg text-neutral-800 border-neutral-300 focus:ring-2 focus:ring-logocolor focus:outline-none focus:ring-offset-2"
+                    required
+                    onChange={handleChange}
+                    defaultValue=""
+                  >
+                    <option value="" disabled hidden>
+                      Select Level
+                    </option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="gender"
+                    className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
+                  >
+                    Province*
+                  </label>
+                  <select
+                    id="gender"
+                    className="w-full px-2 py-[5.5px] mt-1 border rounded-lg text-neutral-800 border-neutral-300 focus:ring-2 focus:ring-logocolor focus:outline-none focus:ring-offset-2"
+                    required
+                    onChange={handleChange}
+                    defaultValue=""
+                  >
+                    <option value="" disabled hidden>
+                      Select Province
                     </option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -151,7 +211,7 @@ function SignUp() {
                 <input
                   type="text"
                   id="emailOrPhone"
-                  className="w-full px-4 py-2 mt-1 border rounded-lg text-neutral-800 border-neutral-300 focus:ring-2 focus:ring-blue-500 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-200 dark:focus:ring-blue-400"
+                  className="w-full px-4 py-2 mt-1 border rounded-lg text-neutral-800 border-neutral-300 focus:ring-2 focus:ring-logocolor focus:outline-none focus:ring-offset-2"
                   required
                   onChange={handleChange}
                 />
@@ -169,14 +229,14 @@ function SignUp() {
                   <input
                     type={showPassword ? "text" : "password"}
                     id="password"
-                    className="w-full px-4 py-2 border rounded-lg text-neutral-800 border-neutral-300 focus:ring-2 focus:ring-blue-500 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-200 dark:focus:ring-blue-400"
+                    className="w-full px-4 py-2 mt-1 border rounded-lg text-neutral-800 border-neutral-300 focus:ring-2 focus:ring-logocolor focus:outline-none focus:ring-offset-2"
                     required
                     onChange={handleChange}
                   />
                   <button
                     type="button"
                     onClick={togglePasswordVisibility}
-                    className="absolute right-3 top-2 focus:outline-none"
+                    className="absolute right-3 top-[15px] focus:outline-none"
                     aria-label={showPassword ? "Hide Password" : "Show Password"}
                   >
                     <img
@@ -191,7 +251,7 @@ function SignUp() {
               {/* Submit Button */}
               <div className='flex item-center justify-center'>
                 <Button
-                    label="Signup"
+                    label="Sign Up"
                     onClick={handleSubmit}
                     disabled={isSubmitting}
                     className={` ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}

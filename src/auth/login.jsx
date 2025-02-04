@@ -3,6 +3,8 @@ import axios from "axios";
 import pic from "../image/apple.png";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../components/button";
+import eyeIcon from "../image/eye.png"; // Eye icon PNG
+import eyeSlashIcon from "../image/eye_close.png";
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -12,6 +14,11 @@ function Login() {
   const [error, setError] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
+
+    const [showPassword, setShowPassword] = useState(false);
+    const togglePasswordVisibility = () => {
+      setShowPassword((prevState) => !prevState);
+    };
 
   const handleChange = (e) => {
     setFormData({
@@ -50,7 +57,7 @@ function Login() {
 
   return (
     <main className="min-h-screen">
-      <div className="absolute p-[2rem]">
+      <div className="absolute sm573:px-[2rem] sm573:py-[1rem] px-[1rem] ">
         <Button label="Go Back" onClick={() => navigate('/')}>
           <svg className="w-5 h-5 mr-[5px] mb-[2px] text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
@@ -59,8 +66,8 @@ function Login() {
         </Button>
       </div>
 
-      <div className="flex items-center justify-center">
-        <div className="p-[2rem] flex flex-col lg:flex-row w-full overflow-hidden">
+      <div className="flex items-center justify-center min-h-screen">
+        <div className=" flex flex-col lg:flex-row w-full overflow-hidden mt-[4rem]">
           {/* Left Column: Image Section */}
           <div className="hidden lg:flex lg:w-1/2 items-center justify-center">
             <img src={pic} alt="Login illustration" className="max-w-[600px] object-contain" />
@@ -83,7 +90,7 @@ function Login() {
                 <input
                   type="text"
                   id="identifier"
-                  className="w-full px-4 py-2 mt-1 border rounded-lg text-neutral-800 border-neutral-300 focus:ring-2 focus:ring-logocolor focus:border-transparent focus:outline-2"
+                  className="w-full px-4 py-2 mt-1 border rounded-lg text-neutral-800 border-neutral-300 focus:ring-2 focus:ring-logocolor focus:outline-none focus:ring-offset-2"
                   value={formData.identifier}
                   onChange={handleChange}
                   required
@@ -92,17 +99,33 @@ function Login() {
 
               {/* Password Input */}
               <div>
-                <label htmlFor="password" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">
-                  Password
+                <label
+                  htmlFor="password"
+                  className="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
+                >
+                  Password*
                 </label>
-                <input
-                  type="password"
-                  id="password"
-                  className="w-full px-4 py-2 mt-1 border rounded-lg text-neutral-800 border-neutral-300 focus:ring-2 focus:ring-logocolor dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-200 dark:focus:ring-orange-400"
-                  value={formData.password}
-                  onChange={handleChange}
-                  required
-                />
+                <div className="relative">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    id="password"
+                    className="w-full px-4 py-2 mt-1 border rounded-lg text-neutral-800 border-neutral-300 focus:ring-2 focus:ring-logocolor focus:outline-none focus:ring-offset-2"
+                    required
+                    onChange={handleChange}
+                  />
+                  <button
+                    type="button"
+                    onClick={togglePasswordVisibility}
+                    className="absolute right-3 top-[15px] focus:outline-none"
+                    aria-label={showPassword ? "Hide Password" : "Show Password"}
+                  >
+                    <img
+                      src={showPassword ? eyeSlashIcon : eyeIcon}
+                      alt={showPassword ? "Hide Password" : "Show Password"}
+                      className="w-5 h-5"
+                    />
+                  </button>
+                </div>
               </div>
 
               {/* Forgot Password Link */}

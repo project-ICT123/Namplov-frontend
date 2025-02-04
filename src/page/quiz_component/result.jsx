@@ -41,6 +41,12 @@ const Result = () => {
         setIsDragging(false); // User stopped dragging
     };
 
+    const handleButtonClick = () => {
+        if (!isSmallScreen) {
+            navigate('/major_test/view_result/result/more_major_that_fit_you');
+        }
+    };
+
     const traitsData = [
         { initial: 'I', name: 'Introversion', bgColor: 'bg-blue' },
         { initial: 'E', name: 'Extroversion', bgColor: 'bg-orange-500' },
@@ -96,7 +102,7 @@ const Result = () => {
                         Discover your personality type and the majors that suit you best.
                     </p>
 
-                    <div className="mt-[2rem] lgl:py-[4.5rem] py-[1.9rem] lgm:w-[30rem] lgl:w-[40rem] bg-white rounded-2xl">
+                    <div className="mt-[2rem] lgl:py-[5rem] py-[1.9rem] lgm:w-[30rem] lgl:w-[40rem] bg-white rounded-2xl">
                         <TraitsList traitsData={traitsData} />
                     </div>
                 </nav>
@@ -115,7 +121,7 @@ const Result = () => {
                             <p className="text-sm font-bold sm:text-base md:text-lg text-logocolor mb-2">
                                 Occupation/Major Trend :
                             </p>
-                            <div className="sm375:h-[5rem] md:h-[7rem] sm375:mb-0 mb-2 item-start">
+                            <div className="sm375:h-[5rem] md:h-[6rem] sm375:mb-0 mb-2 item-start">
                                 <ul
                                     className={`list-disc list-inside text-gray text-sm sm:text-base md:text-lg ${
                                         listData.length === 3 || listData.length === 4
@@ -142,9 +148,9 @@ const Result = () => {
                             onStop={handleDragStop}
                         >
                             <nav
-                                className="flex justify-end lgm:mt-[13.5rem] h-[5rem] fixed lgs:static bottom-[2rem] right-[2rem] item-center justify-center "
+                                className="flex justify-end lgm:mt-[12rem] h-[5rem] fixed lgs:static bottom-[2rem] right-[2rem] item-center justify-center "
                             >
-                                <Button label="See More Major">
+                                <Button label="See More Major" onClick={handleButtonClick}>
                                     <div className="flex flex-col items-center justify-center sm879:w-[10rem]  ">
                                         <p>See more majors</p>
                                         <div className="flex">
